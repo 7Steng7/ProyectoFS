@@ -3,11 +3,12 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar><a href="#"><img src="../../assets/img/logo.png" id="logm"></a></mat-toolbar>
+    <mat-toolbar><a href="/inicio"><img src="../../assets/img/logo.png" id="logm"></a></mat-toolbar>
     <mat-nav-list>
         <a mat-list-item href="/juegos"><mat-icon>gamepad</mat-icon>Juegos</a>
-        <a mat-list-item href="#"><mat-icon>thumbs_up_down</mat-icon>Consejos</a>
-        <a mat-list-item href="#"><mat-icon>public</mat-icon>Noticias</a>
+        <a mat-list-item href="/guia"><mat-icon>thumbs_up_down</mat-icon>Consejos</a>
+        <a mat-list-item href="/noticias"><mat-icon>public</mat-icon>Noticias</a>
+        <a mat-list-item href="/artistas"><mat-icon>brush</mat-icon>Artistas</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,6 +24,7 @@
       <span>CgameS</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    
+        <!-- Poner los componentes según link rel -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

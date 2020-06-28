@@ -11,11 +11,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { JuegosComponent } from './components/juegos/juegos.component';
+import { GuiaComponent } from './components/guia/guia.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
+import { ArtistasComponent } from './components/artistas/artistas.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    JuegosComponent,
+    GuiaComponent,
+    NoticiasComponent,
+    ArtistasComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
