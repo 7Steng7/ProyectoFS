@@ -3,11 +3,11 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar><a href="#"><img src="../../assets/img/logo.png" id="logm"></a></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Item1</a>
-      <a mat-list-item href="#">Item 2</a>
-      <a mat-list-item href="#">Item 3</a>
+        <a mat-list-item href="/juegos"><mat-icon>gamepad</mat-icon>Juegos</a>
+        <a mat-list-item href="#"><mat-icon>thumbs_up_down</mat-icon>Consejos</a>
+        <a mat-list-item href="#"><mat-icon>public</mat-icon>Noticias</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,8 +20,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>proyectCgameS</span>
+      <span>CgameS</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+    
   </mat-sidenav-content>
 </mat-sidenav-container>
