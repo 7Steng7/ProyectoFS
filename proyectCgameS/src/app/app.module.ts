@@ -16,6 +16,7 @@ import { GuiaComponent } from './components/guia/guia.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ArtistasComponent } from './components/artistas/artistas.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { CambiosComponent } from './components/cambios/cambios.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     GuiaComponent,
     NoticiasComponent,
     ArtistasComponent,
-    HomepageComponent
+    HomepageComponent,
+    CambiosComponent
   ],
   imports: [
     BrowserModule,

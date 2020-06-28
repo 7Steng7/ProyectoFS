@@ -6,6 +6,7 @@ import { GuiaComponent } from './components/guia/guia.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ArtistasComponent } from './components/artistas/artistas.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { CambiosComponent } from './components/cambios/cambios.component';
 
 const routes: Routes = [
   {path:'inicio', component: HomepageComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'guia', component: GuiaComponent},
   {path:'noticias', component: NoticiasComponent},
   {path:'artistas', component: ArtistasComponent},
+  {path:'cambios', component: CambiosComponent},
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
 ];
 
