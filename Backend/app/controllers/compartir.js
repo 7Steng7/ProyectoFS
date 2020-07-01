@@ -1,12 +1,12 @@
 module.exports = function (databaseConfig) {
     const express = require('express');
     const router = express.Router();
-    const TABLE = 'usuarios';
+    const TABLE = 'compartir';
     const general = require('../utils/general')();
     general.setDefaultDatabase('firestore');
     let model = general.getDatabaseModel();
-    console.log('Usuarios conectado')
-    //Lista todos los usuarios
+    console.log('Compartir conectado')
+    //Lista todos los compartir
     router.get('/', function (request, response) {
         model.getAll(TABLE)
         .then((rows)=>{

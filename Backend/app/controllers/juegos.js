@@ -1,12 +1,12 @@
 module.exports = function (databaseConfig) {
     const express = require('express');
     const router = express.Router();
-    const TABLE = 'usuarios';
+    const TABLE = 'juegos';
     const general = require('../utils/general')();
     general.setDefaultDatabase('firestore');
     let model = general.getDatabaseModel();
-    console.log('Usuarios conectado')
-    //Lista todos los usuarios
+    console.log('Juegos conectado')
+    //Lista todos los juegos
     router.get('/', function (request, response) {
         model.getAll(TABLE)
         .then((rows)=>{
@@ -17,7 +17,7 @@ module.exports = function (databaseConfig) {
         });
     });
 
-    //Trae un usuario por ID
+    //Trae un juego por ID
     router.get('/:id', function (request, response) {
         let id = request.params.id;
         model.getById(TABLE, id)
@@ -29,7 +29,7 @@ module.exports = function (databaseConfig) {
         });
     });
 
-    //Crea un usuario
+    //Crea un juego
     router.post('/', function (request, response) {        
         model.create(TABLE, request.body)
         .then((object)=>{
@@ -40,7 +40,7 @@ module.exports = function (databaseConfig) {
         });
     });
 
-    //Edita un usuario
+    //Edita un juego
     router.put('/:id', function (request, response) {        
         let id = request.params.id;
         model.update(TABLE, request.body, id)
@@ -53,7 +53,7 @@ module.exports = function (databaseConfig) {
 
     });
     
-    //Elimina un usuario
+    //Elimina un juego
     router.delete('/:id', function (request, response) {
         let id = request.params.id;        
         model.delete(TABLE, id)

@@ -24,7 +24,6 @@ const General = function () {
         switch (General.defaultDatabase) {
             case 'firestore':
                 model = require('../model/firestore')(General.firebase.firestore());
-                console.log('Ingresando a la base de datos : ')
                 break;
             default:
                 model = require('../model/firestore')(General.firebase.firestore());

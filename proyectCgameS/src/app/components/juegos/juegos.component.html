@@ -1,3 +1,16 @@
-<h1>Categorías</h1>
-<h2>Imagen</h2>
-<h3>Descripcion</h3>
+  <mat-card *ngFor="let juego of juegos" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{juego.name_game}}</mat-card-title>
+      <mat-card-subtitle>{{juego.rol}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{juego.link_imagen}} alt="imagen de juego">
+    <mat-card-content>
+      <p>
+        {{juego.descripcion}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Guías, consejos y más</button>
+    </mat-card-actions>
+  </mat-card>

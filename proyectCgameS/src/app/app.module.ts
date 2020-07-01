@@ -17,6 +17,8 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ArtistasComponent } from './components/artistas/artistas.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { CambiosComponent } from './components/cambios/cambios.component';
+import { HttpClientModule }    from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { CambiosComponent } from './components/cambios/cambios.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
