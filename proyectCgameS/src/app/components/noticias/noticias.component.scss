@@ -1,0 +1,17 @@
+.mat-expansion-panel-header{
+  background-color: #2b0a35;
+}
+::ng-deep .mat-expansion-panel{
+  background-color: black;
+}
+
+::ng-deep .mat-expansion-panel-body{
+  background-color:#7b1fa2;
+  text-align: center;
+}
+.mat-button{
+  background-color: #2b0a35;
+}
+.mat-expansion-panel-header-description {
+  justify-content: flex-end;
+}

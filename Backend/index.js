@@ -20,6 +20,9 @@ let juegosController = require('./app/controllers/juegos')();
 aplication.use('/juegos', juegosController);
 let compartirController = require('./app/controllers/compartir')();
 aplication.use('/compartir', compartirController);
+let noticiasController = require('./app/controllers/noticias')();
+aplication.use('/noticias', noticiasController);
+
 //Declarando controladores
 
 aplication.listen(port,bind, function () {

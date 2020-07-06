@@ -86,6 +86,5 @@ module.exports = function (databaseConfig) {
             response.send(error);
         });
     });    
-
     return router;
 }

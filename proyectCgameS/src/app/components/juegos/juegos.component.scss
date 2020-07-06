@@ -1,5 +1,5 @@
 .example-card {
-    max-width: 300px;
+    max-width: 278px;
     display: inline-block;
     margin: 20px;
     vertical-align: top;
@@ -9,22 +9,25 @@
     background-size: cover;
   }
   .mat-card{
-    background: rgba(19,19,19,1);
-    background: -moz-linear-gradient(-45deg, rgba(19,19,19,1) 0%, rgba(123,31,162,1) 21%, rgba(28,28,28,1) 42%, rgba(123,31,162,1) 64%, rgba(0,0,0,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(19,19,19,1)), color-stop(21%, rgba(123,31,162,1)), color-stop(42%, rgba(28,28,28,1)), color-stop(64%, rgba(123,31,162,1)), color-stop(100%, rgba(0,0,0,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(19,19,19,1) 0%, rgba(123,31,162,1) 21%, rgba(28,28,28,1) 42%, rgba(123,31,162,1) 64%, rgba(0,0,0,1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(19,19,19,1) 0%, rgba(123,31,162,1) 21%, rgba(28,28,28,1) 42%, rgba(123,31,162,1) 64%, rgba(0,0,0,1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(19,19,19,1) 0%, rgba(123,31,162,1) 21%, rgba(28,28,28,1) 42%, rgba(123,31,162,1) 64%, rgba(0,0,0,1) 100%);
-    background: linear-gradient(135deg, rgba(19,19,19,1) 0%, rgba(123,31,162,1) 21%, rgba(28,28,28,1) 42%, rgba(123,31,162,1) 64%, rgba(0,0,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#000000', GradientType=1 );
+    background: rgba(0,0,0,1);
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 29%, rgba(123,31,162,1) 29%, rgba(123,31,162,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(29%, rgba(0,0,0,1)), color-stop(29%, rgba(123,31,162,1)), color-stop(100%, rgba(123,31,162,1)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 29%, rgba(123,31,162,1) 29%, rgba(123,31,162,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 29%, rgba(123,31,162,1) 29%, rgba(123,31,162,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 29%, rgba(123,31,162,1) 29%, rgba(123,31,162,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 29%, rgba(123,31,162,1) 29%, rgba(123,31,162,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#7b1fa2', GradientType=0 );
   }
   .mat-card-subtitle{
     color: white;
   }
   .mat-card-image{
-    max-height: 400px;
+    max-height: 100%;
   }
   .mat-card-actions{
     display: flex;
     justify-content: center;
+  }
+  .mat-drawer-content{
+    width: 100% !important;
   }

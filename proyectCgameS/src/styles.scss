@@ -2,3 +2,37 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-drawer-content{
+    width: 100%;
+}
+.mat-expansion-panel-body .ng-tns-c53-1{
+    display: inline-block;
+    text-align: center;
+    max-width: 50%;
+  }
+  .mat-expansion-panel-body img{
+    margin-right: 50px;
+  }
+  
+  @media screen and (min-width: 961px){
+    .mat-drawer-content {
+      margin-left: 200px;
+      max-width: 87%;
+    }
+  }
+  @media screen and (max-width: 960px){
+      .mat-drawer-content {
+        max-width: 100%;
+      }
+    }
+  @media screen and (max-width: 660px){
+      .mat-drawer-content {
+        max-width: 72%;
+      }
+  }
+  @media screen and (max-width: 600px){
+    .mat-drawer-content {
+      margin : auto;
+      max-width: 100%;
+    }
+}

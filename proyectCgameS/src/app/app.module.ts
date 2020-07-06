@@ -19,6 +19,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { CambiosComponent } from './components/cambios/cambios.component';
 import { HttpClientModule }    from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {MatCardModule} from '@angular/material/card';
     MatListModule,
     HttpClientModule,
     MatCardModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
