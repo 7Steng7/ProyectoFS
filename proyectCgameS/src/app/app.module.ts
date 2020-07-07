@@ -19,6 +19,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { CambiosComponent } from './components/cambios/cambios.component';
 import { HttpClientModule }    from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
+import { GuiaDetailComponent } from './guia-detail/guia-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import {MatCardModule} from '@angular/material/card';
     NoticiasComponent,
     ArtistasComponent,
     HomepageComponent,
-    CambiosComponent
+    CambiosComponent,
+    GuiaDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import {MatCardModule} from '@angular/material/card';
     MatListModule,
     HttpClientModule,
     MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

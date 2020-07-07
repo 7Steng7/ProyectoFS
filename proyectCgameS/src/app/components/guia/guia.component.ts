@@ -12,4 +12,6 @@ export class GuiaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedGuia: GuiaComponent;
+
 }
