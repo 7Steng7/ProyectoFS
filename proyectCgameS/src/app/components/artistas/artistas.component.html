@@ -1,2 +1,12 @@
-<h1>Seccion para que la comunidad suban dibujos y comenten entre ellos</h1>
-<button class="btn btn-danger">Prueba boton</button>
+    <ng-template #showLogin>
+        <div id="logins">
+            <h1>Este es un espacio para amantes del arte y el diseño</h1>
+            <h2>Para continuar porfavor inicie sesion</h2>
+            <button class="btn btn-danger" (click)="login()">Ingresar con google</button>
+            <button class="btn btn-primary" (click)="loginfacebook()">Ingresar con facebook</button>
+        </div>
+    </ng-template>
+  <div *ngIf="auth.user | async as user; else showLogin">
+    <h1><mat-icon>star_rate</mat-icon>Bienvenido {{ user.displayName }}<mat-icon>star_rate</mat-icon></h1>
+    <button class="btn btn-warning" (click)="logout()">Cerrar sesion</button>
+  </div>

@@ -11,7 +11,7 @@ import{ Noticia } from '../interfaces/noticia';
 export class JuegosService {
 
   private juegosUrl = 'http://localhost:3456/juegos';
-  private noticiasUrl = "http://localhost:3456/noticias"
+  private noticiasUrl = "http://localhost:3456/noticias";
 
   constructor(private http: HttpClient) { }
 

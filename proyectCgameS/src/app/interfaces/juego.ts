@@ -5,4 +5,5 @@ export interface Juego {
     dateCreation: number;
     descripcion: string;
     link_imagen: string;
+    consejos: string;
 }

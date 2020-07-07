@@ -20,6 +20,8 @@ import { CambiosComponent } from './components/cambios/cambios.component';
 import { HttpClientModule }    from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { AngularFireModule } from '@angular/fire'
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     HttpClientModule,
     MatCardModule,
     MatExpansionModule,
+    AngularFireModule.initializeApp(environment.firebase),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

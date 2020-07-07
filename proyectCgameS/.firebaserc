@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cgames-afab5": {
+      "hosting": {
+        "proyectCgameS": [
+          "cgames-afab5"
+        ]
+      }
+    }
+  }
+}
