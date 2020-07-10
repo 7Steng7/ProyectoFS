@@ -7,6 +7,12 @@
 body{
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
+    background: #34495e;
+    color: white;
+}
+
+.acerca-de {
+    background-color: #34495e;
 }
 
 header{
@@ -42,7 +48,7 @@ header .boton{
    display: inline-block;
    padding: 6px;
    width: 128px;
-   border: 1px solid #fff;
+   border: 1px solid #34495e;
    color: #fff;
    font-size: 19px;
    text-align: center;
@@ -58,7 +64,8 @@ header .boton{
     left: 0;
     border-width: 0 0 35vh 100vw;
     border-style: solid;
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent #34495e transparent;
+    background-color: #34495e;
 }
 
 .sesgoarriba{
@@ -68,7 +75,7 @@ header .boton{
     left: 0;
     border-width: 35vh 100vw 0 0 ;
     border-style: solid;
-    border-color: #fff transparent transparent  transparent;
+    border-color: #34495e transparent transparent  transparent;
 }
 
 .contenedor{
@@ -98,22 +105,25 @@ header .boton{
     font-weight: 300;
     text-align: justify;
     line-height: 24px;
-    color: rgb(24,16,16);
+    color: white;
+    background: #34495e;
 
 }
 
 .acerca-de .boton{
     display: inline-block;
+    background: #34495e;
     padding: 6px;
     width: 128px;
     font-weight: 300;
     border: 1px solid rgba(24,16,16,.7);
-    color: rgb(24,16,16);
+    color: white;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
     border-radius: 16px;
     margin-top: 24px;
+    background-color: #34495e;
  }
 
  .galeria {
@@ -206,7 +216,7 @@ header .boton{
     left: 0;
     border-width: 0 0 35vh 100vw;
     border-style: solid;
-    border-color: transparent transparent #34495e transparent;
+    border-color: transparent transparent white transparent;
  }
 
  .titulo-patrocinadores, .subtitulo-patrocinadores{
@@ -241,10 +251,7 @@ header .boton{
      width: 100%;
  }
 
- footer{
-     background: #34495e;
-     height: auto;
- }
+ 
 
  .titulo-footer, .subtitulo-footer{
      color: #fff;
@@ -383,6 +390,16 @@ header .textos2{
     margin-top: 152px;
 }
 
+.acerca-de2{
+    background-color: #34495e;
+    color: white;
+}
+
+.miembros2{
+    background-color: #34495e;
+    color: white;
+}
+
 header .titulo2{
     font-size: 85px;
     
@@ -399,7 +416,7 @@ header .boton2{
    display: inline-block;
    padding: 6px;
    width: 128px;
-   border: 1px solid #fff;
+   border: 1px solid #34495e;
    color: #fff;
    font-size: 19px;
    text-align: center;
@@ -434,6 +451,7 @@ header .boton2{
     margin: auto;
     overflow: hidden;
     padding: 52px 0;
+    
 }
 
 .sobre-nosotros2{
@@ -455,7 +473,7 @@ header .boton2{
     font-weight: 300;
     text-align: justify;
     line-height: 24px;
-    color: rgb(24,16,16);
+    color: white;
 
 }
 
@@ -465,12 +483,13 @@ header .boton2{
     width: 128px;
     font-weight: 300;
     border: 1px solid rgba(24,16,16,.7);
-    color: rgb(24,16,16);
+    color: white;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
     border-radius: 16px;
     margin-top: 24px;
+    background-color: #34495e
  }
 
  .galeria2 {
@@ -516,7 +535,7 @@ header .boton2{
      top: 46%;
      width: 40px;
      height: 5px;
-     background: #fff;
+     background: #34495e;
      margin: auto;
  }
 
@@ -676,6 +695,7 @@ header .boton2{
     overflow: hidden;
     color: #fff;
     text-align: center;
+    
  }
  
  header .textos3{
@@ -724,7 +744,8 @@ header .boton2{
      left: 0;
      border-width: 35vh 100vw 0 0 ;
      border-style: solid;
-     border-color: #fff transparent transparent  transparent;
+     border-color: #34495e transparent transparent  transparent;
+    
  }
  
  .contenedor3{
@@ -733,6 +754,8 @@ header .boton2{
      margin: auto;
      overflow: hidden;
      padding: 52px 0;
+
+
  }
  
  .sobre-nosotros3{
@@ -740,6 +763,7 @@ header .boton2{
      font-size: 56px;
      margin-bottom: 10px;
      font-weight: 600;
+     
  }
  
  .slogan3{
@@ -754,8 +778,18 @@ header .boton2{
      font-weight: 300;
      text-align: justify;
      line-height: 24px;
-     color: rgb(24,16,16);
+     color: white;
  
+ }
+
+ .acerca-de3 {
+    background-color: #34495e;
+    color: white;
+ }
+ 
+ .miembros3{
+    background-color: #34495e;
+    color: white;
  }
  
  .acerca-de3 .boton3{
@@ -764,12 +798,13 @@ header .boton2{
      width: 128px;
      font-weight: 300;
      border: 1px solid rgba(24,16,16,.7);
-     color: rgb(24,16,16);
+     color: white;
      font-size: 16px;
      text-align: center;
      text-decoration: none;
      border-radius: 16px;
      margin-top: 24px;
+     
   }
  
   .galeria3 {
@@ -868,11 +903,13 @@ header .boton2{
   .titulo-patrocinadores3, .subtitulo-patrocinadores3{
       color: #fff;
       text-align: center;
+      
   }
  
   .titulo-patrocinadores3{
       font-size: 56px;
       margin-top: 48px;
+      
   }
  
   .subtitulo-patrocinadores3{
@@ -980,6 +1017,11 @@ header .boton2{
  header .textos4{
      margin-top: 152px;
  }
+ .acerca-de4{
+    background-color: #34495e;
+    color: white;
+ }
+
  
  header .titulo4{
      font-size: 85px;
@@ -1054,7 +1096,7 @@ header .boton2{
      font-weight: 300;
      text-align: justify;
      line-height: 24px;
-     color: rgb(24,16,16);
+     color:white;
  
  }
  
@@ -1064,13 +1106,14 @@ header .boton2{
      width: 128px;
      font-weight: 300;
      border: 1px solid rgba(24,16,16,.7);
-     color: rgb(24,16,16);
+     color:  white;
      font-size: 16px;
      text-align: center;
      text-decoration: none;
      border-radius: 16px;
      margin-top: 24px;
   }
+
  
   .galeria4 {
       width: 100%;
@@ -1153,6 +1196,11 @@ header .boton2{
       background-position: center;
       padding-top: 130px;
  
+  }
+
+  .miembros4{
+      background-color: #34495e;
+      color: #fff;
   }
  
   .sesgoabajo-unico4{
@@ -1293,6 +1341,11 @@ header .boton2{
      color: black;
      
  }
+
+ .miembros{
+    background-color: #34495e;
+    color: white;
+ }
  
  header .boton5{
     display: inline-block;
@@ -1305,6 +1358,11 @@ header .boton2{
     text-decoration: none;
     border-radius: 16px;
  
+ }
+
+ .acerca-de5{
+    background-color: #34495e;
+    color: white;
  }
  
  .sesgoabajo5{
@@ -1354,7 +1412,7 @@ header .boton2{
      font-weight: 300;
      text-align: justify;
      line-height: 24px;
-     color: rgb(24,16,16);
+     color: white;
  
  }
  
@@ -1364,7 +1422,7 @@ header .boton2{
      width: 128px;
      font-weight: 300;
      border: 1px solid rgba(24,16,16,.7);
-     color: rgb(24,16,16);
+     color: white;
      font-size: 16px;
      text-align: center;
      text-decoration: none;
@@ -1385,6 +1443,11 @@ header .boton2{
       height: 500px;
      overflow: hidden;
      position: relative;
+  }
+
+  .miembros5{
+    background-color: #34495e;
+    color: white;
   }
  
   .imagenes5 img {
@@ -1591,6 +1654,15 @@ header .boton2{
      color: black;
      
  }
+ .acerca-de6{
+    background-color: #34495e;
+    color: white;
+ }
+
+ .miembros6{
+    background-color: #34495e;
+    color: white;
+ }
  
  header .boton6{
     display: inline-block;
@@ -1652,7 +1724,7 @@ header .boton2{
      font-weight: 300;
      text-align: justify;
      line-height: 24px;
-     color: rgb(24,16,16);
+     color: white;
  
  }
  
@@ -1662,7 +1734,7 @@ header .boton2{
      width: 128px;
      font-weight: 300;
      border: 1px solid rgba(24,16,16,.7);
-     color: rgb(24,16,16);
+     color: white;
      font-size: 16px;
      text-align: center;
      text-decoration: none;
