@@ -1,0 +1,1861 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+}
+
+header{
+   width: 100%;
+   height: 650px;
+   background-image: url(imagenes/../../../../assets/img/NBA4K.jpg);
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   overflow: hidden;
+   color: #fff;
+   text-align: center;
+}
+
+header .textos{
+    margin-top: 152px;
+}
+
+header .titulo{
+    font-size: 85px;
+    color: black;
+}
+
+header .subtitulo{
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 32px;
+    color: black;
+}
+
+header .boton{
+   display: inline-block;
+   padding: 6px;
+   width: 128px;
+   border: 1px solid #fff;
+   color: #fff;
+   font-size: 19px;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 16px;
+
+}
+
+.sesgoabajo{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.sesgoarriba{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 35vh 100vw 0 0 ;
+    border-style: solid;
+    border-color: #fff transparent transparent  transparent;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+
+.sobre-nosotros{
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.slogan{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.parrafo{
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: rgb(24,16,16);
+
+}
+
+.acerca-de .boton{
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    font-weight: 300;
+    border: 1px solid rgba(24,16,16,.7);
+    color: rgb(24,16,16);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 24px;
+ }
+
+ .galeria {
+     width: 100%;
+     height: 500px;
+     overflow: hidden;
+     display: flex;
+     position: relative;
+ }
+
+ .imagenes {
+     width: 20%;
+     height: 500px;
+    overflow: hidden;
+    position: relative;
+ }
+
+ .imagenes img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .encima{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(53, 74, 94, 0.815);
+ }
+
+ .encima h2{
+     position: relative;
+     top: 45%;
+     text-align: center;
+     color: #fff;
+ }
+
+ .encima div{
+     position: relative;
+     display: block;
+     top: 46%;
+     width: 40px;
+     height: 5px;
+     background: #fff;
+     margin: auto;
+ }
+
+ .cards{
+     width: 100%;
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;     
+ }
+
+ .card{
+     margin: 20px 0;
+     width: 30%;
+     height: 250px;
+     text-align: center;
+     padding: 20px;
+     box-shadow: 0px 0px 4px 0 rgb(52, 73, 94, 0.849);
+    
+ }
+
+ .cards img{
+     width: 140px;
+     height: 140px;
+     object-fit: cover;
+     border-radius: 100%;
+ }
+
+ .fondo{
+     height: 900px;
+     position: relative;
+     background-image: url(imagenes/../../../../assets/img/NBAarriba.jpeg);
+     overflow: hidden;
+     background-attachment: fixed;
+     background-position: center;
+     padding-top: 130px;
+
+ }
+
+ .sesgoabajo-unico{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #34495e transparent;
+ }
+
+ .titulo-patrocinadores, .subtitulo-patrocinadores{
+     color: black;
+     text-align: center;
+ }
+
+ .titulo-patrocinadores{
+     font-size: 56px;
+     margin-top: 48px;
+ }
+
+ .subtitulo-patrocinadores{
+     font-size: 24px;
+     font-weight: 300;
+     margin-bottom: 64px;
+ }
+
+ .clientes{
+     display: flex;
+     flex-wrap: wrap;
+     margin-bottom: 64px;
+     width: 100%;
+     justify-content: space-between;
+ }
+
+ .cliente{
+     width: 30%;
+ }
+
+ .cliente img {
+     width: 100%;
+ }
+
+ footer{
+     background: #34495e;
+     height: auto;
+ }
+
+ .titulo-footer, .subtitulo-footer{
+     color: #fff;
+     text-align: center;
+     font-size: 56px;
+ }
+
+ .subtitulo-footer{
+     font-size: 16px;
+     font-weight: 400;
+     margin-bottom: 64px;
+ }
+
+ form{
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     margin: auto;
+ }
+
+ input[type="text"], input[type="email"]{
+     display: inline-block;
+     width: 48%;
+     padding: 13px;
+     border: none;
+     color: #fff;
+     font-family: 'Noto Sans JP', sans-serif;
+     background: rgba(37, 37, 33,.7);
+     margin-bottom: 16px;
+     border-top: 1px solid rgba(37, 37, 33,.7);
+ }
+
+ input[type="text"]:focus, input[type="email"]:focus{
+    border-top: 1px solid rgba(245, 245, 242, 0.702);   
+ }
+
+ textarea{
+     display: block;
+     width: 100%;
+     max-width: 100%;
+     min-width: 100%;
+     max-height: 200px;
+     min-height: 200px;
+     background: rgba(37, 37, 33,.7);
+     padding: 13px;
+     border: none;
+     color: #fff;
+     font-family: 'Noto Sans JP', sans-serif;
+     margin-bottom: 16px;
+ }
+
+ input[type="submit"]{
+     display: inline-block;
+     padding: 13px;
+     border: none;
+     color: #fff;
+     background: rgba(37, 37, 33,.7);
+     width: 96px;
+ }
+
+ @media screen and (max-width:900px){
+     .card{
+         width: 48%;
+     }
+ }
+
+ @media screen and (max-width:610px){
+    header .textos{
+        margin-top: 130px;
+    }
+    header .titulo{
+        font-size: 75px;
+    }
+    .card{
+        width: 90%;
+    }
+    .fondo{
+        height: auto;
+    }
+    .especial{
+        display: none;
+    }
+    .cliente{
+        width: 90%;
+        height: 200px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:380px){
+    header .textos{
+        margin-top: 100px;
+    }
+    header .titulo{
+        font-size: 65px;
+    }
+    header .subtitulo{
+        font-size: 25px;
+        margin-bottom: 32px;
+    }
+    .sobre-nosotros{
+        font-size: 46px;
+    }
+    .slogan{
+        font-size: 20px;
+    }
+    .titulo-patrocinadores{
+        font-size: 46px;
+    }
+    .subtitulo-patrocinadores{
+        font-size: 20px;
+    }
+    .titulo-footer{
+        font-size: 40px;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.gtav{
+   width: 100%;
+   height: 650px;
+   background-image: url(imagenes/../../../../assets/img/Gtav.jpg);
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   overflow: hidden;
+   color: #fff;
+   text-align: center;
+}
+
+header .textos2{
+    margin-top: 152px;
+}
+
+header .titulo2{
+    font-size: 85px;
+    
+}
+
+header .subtitulo2{
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 32px;
+    
+}
+
+header .boton2{
+   display: inline-block;
+   padding: 6px;
+   width: 128px;
+   border: 1px solid #fff;
+   color: #fff;
+   font-size: 19px;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 16px;
+
+}
+
+.sesgoabajo2{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.sesgoarriba2{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 35vh 100vw 0 0 ;
+    border-style: solid;
+    border-color: #fff transparent transparent  transparent;
+}
+
+.contenedor2{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+
+.sobre-nosotros2{
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.slogan2{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.parrafo2{
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: rgb(24,16,16);
+
+}
+
+.acerca-de2 .boton2{
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    font-weight: 300;
+    border: 1px solid rgba(24,16,16,.7);
+    color: rgb(24,16,16);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 24px;
+ }
+
+ .galeria2 {
+     width: 100%;
+     height: 500px;
+     overflow: hidden;
+     display: flex;
+     position: relative;
+ }
+
+ .imagenes2 {
+     width: 20%;
+     height: 500px;
+    overflow: hidden;
+    position: relative;
+ }
+
+ .imagenes2 img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .encima2{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(53, 74, 94, 0.815);
+ }
+
+ .encima2 h2{
+     position: relative;
+     top: 45%;
+     text-align: center;
+     color: #fff;
+ }
+
+ .encima2 div{
+     position: relative;
+     display: block;
+     top: 46%;
+     width: 40px;
+     height: 5px;
+     background: #fff;
+     margin: auto;
+ }
+
+ .cards2{
+     width: 100%;
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;     
+ }
+
+ .card2{
+     margin: 20px 0;
+     width: 30%;
+     height: 250px;
+     text-align: center;
+     padding: 20px;
+     box-shadow: 0px 0px 4px 0 rgb(52, 73, 94, 0.849);
+    
+ }
+
+ .cards2 img{
+     width: 140px;
+     height: 140px;
+     object-fit: cover;
+     border-radius: 100%;
+ }
+
+ .fondo2{
+     height: 900px;
+     position: relative;
+     background-image: url(imagenes/../../../../assets/img/gta2.jpg);
+     overflow: hidden;
+     background-attachment: fixed;
+     background-position: center;
+     padding-top: 130px;
+
+ }
+
+ .sesgoabajo-unico2{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #34495e transparent;
+ }
+
+ .titulo-patrocinadores2, .subtitulo-patrocinadores2{
+     color: #fff;
+     text-align: center;
+ }
+
+ .titulo-patrocinadores2{
+     font-size: 56px;
+     margin-top: 48px;
+ }
+
+ .subtitulo-patrocinadores2{
+     font-size: 24px;
+     font-weight: 300;
+     margin-bottom: 64px;
+ }
+
+ .clientes2{
+     display: flex;
+     flex-wrap: wrap;
+     margin-bottom: 64px;
+     width: 100%;
+     justify-content: space-between;
+ }
+
+ .cliente2{
+     width: 30%;
+ }
+
+ .cliente2 img {
+     width: 100%;
+ }
+
+ footer{
+     background: #34495e;
+     height: auto;
+ }
+
+
+ @media screen and (max-width:900px){
+     .card2{
+         width: 48%;
+     }
+ }
+
+ @media screen and (max-width:610px){
+    header .textos2{
+        margin-top: 130px;
+    }
+    header .titulo2{
+        font-size: 75px;
+    }
+    .card2{
+        width: 90%;
+    }
+    .fondo2{
+        height: auto;
+    }
+    .especial2{
+        display: none;
+    }
+    .cliente2{
+        width: 90%;
+        height: 200px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:380px){
+    header .textos2{
+        margin-top: 100px;
+    }
+    header .titulo2{
+        font-size: 65px;
+    }
+    header .subtitulo2{
+        font-size: 25px;
+        margin-bottom: 32px;
+    }
+    .sobre-nosotros2{
+        font-size: 46px;
+    }
+    .slogan2{
+        font-size: 20px;
+    }
+    .titulo-patrocinadores2{
+        font-size: 46px;
+    }
+    .subtitulo-patrocinadores2{
+        font-size: 20px;
+    }
+    .titulo-footer2{
+        font-size: 40px;
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.halo{
+    width: 100%;
+    height: 650px;
+    background-image: url(imagenes/../../../../assets/img/Halo5Guardians.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+ }
+ 
+ header .textos3{
+     margin-top: 152px;
+ }
+ 
+ header .titulo3{
+     font-size: 85px;
+     
+ }
+ 
+ header .subtitulo3{
+     font-size: 42px;
+     font-weight: 300;
+     margin-bottom: 32px;
+     
+ }
+ 
+ header .boton3{
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+ 
+ }
+ 
+ .sesgoabajo3{
+     z-index: 10;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 35vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #fff transparent;
+ }
+ 
+ .sesgoarriba3{
+     z-index: 10;
+     position: absolute;
+     top: 0;
+     left: 0;
+     border-width: 35vh 100vw 0 0 ;
+     border-style: solid;
+     border-color: #fff transparent transparent  transparent;
+ }
+ 
+ .contenedor3{
+     width: 90%;
+     max-width: 1000px;
+     margin: auto;
+     overflow: hidden;
+     padding: 52px 0;
+ }
+ 
+ .sobre-nosotros3{
+     text-align: center;
+     font-size: 56px;
+     margin-bottom: 10px;
+     font-weight: 600;
+ }
+ 
+ .slogan3{
+     font-size: 24px;
+     font-weight: 300;
+     text-align: center;
+     margin-bottom: 24px;
+ }
+ 
+ .parrafo3{
+     margin-bottom: 13px;
+     font-weight: 300;
+     text-align: justify;
+     line-height: 24px;
+     color: rgb(24,16,16);
+ 
+ }
+ 
+ .acerca-de3 .boton3{
+     display: inline-block;
+     padding: 6px;
+     width: 128px;
+     font-weight: 300;
+     border: 1px solid rgba(24,16,16,.7);
+     color: rgb(24,16,16);
+     font-size: 16px;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 16px;
+     margin-top: 24px;
+  }
+ 
+  .galeria3 {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+  }
+ 
+  .imagenes3 {
+      width: 20%;
+      height: 500px;
+     overflow: hidden;
+     position: relative;
+  }
+ 
+  .imagenes3 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+ 
+  .encima3{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(53, 74, 94, 0.815);
+  }
+ 
+  .encima3 h2{
+      position: relative;
+      top: 45%;
+      text-align: center;
+      color: #fff;
+  }
+ 
+  .encima3 div{
+      position: relative;
+      display: block;
+      top: 46%;
+      width: 40px;
+      height: 5px;
+      background: #fff;
+      margin: auto;
+  }
+ 
+  .cards3{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;     
+  }
+ 
+  .card3{
+      margin: 20px 0;
+      width: 30%;
+      height: 250px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0px 0px 4px 0 rgb(52, 73, 94, 0.849);
+     
+  }
+ 
+  .cards3 img{
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 100%;
+  }
+ 
+  .fondo3{
+      height: 900px;
+      position: relative;
+      background-image: url(imagenes/../../../../assets/img/HaloGuardians.jpg);
+      overflow: hidden;
+      background-attachment: fixed;
+      background-position: center;
+      padding-top: 130px;
+ 
+  }
+ 
+  .sesgoabajo-unico3{
+     z-index: 10;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 35vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #34495e transparent;
+  }
+ 
+  .titulo-patrocinadores3, .subtitulo-patrocinadores3{
+      color: #fff;
+      text-align: center;
+  }
+ 
+  .titulo-patrocinadores3{
+      font-size: 56px;
+      margin-top: 48px;
+  }
+ 
+  .subtitulo-patrocinadores3{
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 64px;
+  }
+ 
+  .clientes3{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+      width: 100%;
+      justify-content: space-between;
+  }
+ 
+  .cliente3{
+      width: 30%;
+  }
+ 
+  .cliente3 img {
+      width: 100%;
+  }
+ 
+  footer{
+      background: #34495e;
+      height: auto;
+  }
+ 
+ 
+  @media screen and (max-width:900px){
+      .card3{
+          width: 48%;
+      }
+  }
+ 
+  @media screen and (max-width:610px){
+     header .textos3{
+         margin-top: 130px;
+     }
+     header .titulo3{
+         font-size: 75px;
+     }
+     .card3{
+         width: 90%;
+     }
+     .fondo3{
+         height: auto;
+     }
+     .especial3{
+         display: none;
+     }
+     .cliente3{
+         width: 90%;
+         height: 200px;
+         margin-bottom: 50px;
+     }
+ }
+ 
+ @media screen and (max-width:380px){
+     header .textos3{
+         margin-top: 100px;
+     }
+     header .titulo3{
+         font-size: 65px;
+     }
+     header .subtitulo3{
+         font-size: 25px;
+         margin-bottom: 32px;
+     }
+     .sobre-nosotros3{
+         font-size: 46px;
+     }
+     .slogan3{
+         font-size: 20px;
+     }
+     .titulo-patrocinadores3{
+         font-size: 46px;
+     }
+     .subtitulo-patrocinadores3{
+         font-size: 20px;
+     }
+     .titulo-footer3{
+         font-size: 40px;
+     }
+ }
+
+
+ ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.gears{
+    width: 100%;
+    height: 650px;
+    background-image: url(imagenes/../../../../assets/img/gears5.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+ }
+ 
+ header .textos4{
+     margin-top: 152px;
+ }
+ 
+ header .titulo4{
+     font-size: 85px;
+     
+ }
+ 
+ header .subtitulo4{
+     font-size: 42px;
+     font-weight: 300;
+     margin-bottom: 32px;
+     color: black;
+     
+ }
+ 
+ header .boton4{
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+ 
+ }
+ 
+ .sesgoabajo4{
+     z-index: 10;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 35vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #fff transparent;
+ }
+ 
+ .sesgoarriba4{
+     z-index: 10;
+     position: absolute;
+     top: 0;
+     left: 0;
+     border-width: 35vh 100vw 0 0 ;
+     border-style: solid;
+     border-color: #fff transparent transparent  transparent;
+ }
+ 
+ .contenedor4{
+     width: 90%;
+     max-width: 1000px;
+     margin: auto;
+     overflow: hidden;
+     padding: 52px 0;
+ }
+ 
+ .sobre-nosotros4{
+     text-align: center;
+     font-size: 56px;
+     margin-bottom: 10px;
+     font-weight: 600;
+ }
+ 
+ .slogan4{
+     font-size: 24px;
+     font-weight: 300;
+     text-align: center;
+     margin-bottom: 24px;
+ }
+ 
+ .parrafo4{
+     margin-bottom: 13px;
+     font-weight: 300;
+     text-align: justify;
+     line-height: 24px;
+     color: rgb(24,16,16);
+ 
+ }
+ 
+ .acerca-de4 .boton4{
+     display: inline-block;
+     padding: 6px;
+     width: 128px;
+     font-weight: 300;
+     border: 1px solid rgba(24,16,16,.7);
+     color: rgb(24,16,16);
+     font-size: 16px;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 16px;
+     margin-top: 24px;
+  }
+ 
+  .galeria4 {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+  }
+ 
+  .imagenes4 {
+      width: 20%;
+      height: 500px;
+     overflow: hidden;
+     position: relative;
+  }
+ 
+  .imagenes4 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+ 
+  .encima4{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(53, 74, 94, 0.815);
+  }
+ 
+  .encima4 h2{
+      position: relative;
+      top: 45%;
+      text-align: center;
+      color: #fff;
+  }
+ 
+  .encima4 div{
+      position: relative;
+      display: block;
+      top: 46%;
+      width: 40px;
+      height: 5px;
+      background: #fff;
+      margin: auto;
+  }
+ 
+  .cards4{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;     
+  }
+ 
+  .card4{
+      margin: 20px 0;
+      width: 30%;
+      height: 250px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0px 0px 4px 0 rgb(52, 73, 94, 0.849);
+     
+  }
+ 
+  .cards4 img{
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 100%;
+  }
+ 
+  .fondo4{
+      height: 900px;
+      position: relative;
+      background-image: url(imagenes/../../../../assets/img/gears5.2.jpg);
+      overflow: hidden;
+      background-attachment: fixed;
+      background-position: center;
+      padding-top: 130px;
+ 
+  }
+ 
+  .sesgoabajo-unico4{
+     z-index: 10;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 35vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #34495e transparent;
+  }
+ 
+  .titulo-patrocinadores4, .subtitulo-patrocinadores4{
+      color: #fff;
+      text-align: center;
+  }
+ 
+  .titulo-patrocinadores4{
+      font-size: 56px;
+      margin-top: 48px;
+  }
+ 
+  .subtitulo-patrocinadores4{
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 64px;
+  }
+ 
+  .clientes4{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+      width: 100%;
+      justify-content: space-between;
+  }
+ 
+  .cliente4{
+      width: 30%;
+  }
+ 
+  .cliente4 img {
+      width: 100%;
+  }
+ 
+  footer{
+      background: #34495e;
+      height: auto;
+  }
+ 
+ 
+  @media screen and (max-width:900px){
+      .card4{
+          width: 48%;
+      }
+  }
+ 
+  @media screen and (max-width:610px){
+     header .textos4{
+         margin-top: 130px;
+     }
+     header .titulo4{
+         font-size: 75px;
+     }
+     .card4{
+         width: 90%;
+     }
+     .fondo4{
+         height: auto;
+     }
+     .especial4{
+         display: none;
+     }
+     .cliente4{
+         width: 90%;
+         height: 200px;
+         margin-bottom: 50px;
+     }
+ }
+ 
+ @media screen and (max-width:380px){
+     header .textos4{
+         margin-top: 100px;
+     }
+     header .titulo4{
+         font-size: 65px;
+     }
+     header .subtitulo4{
+         font-size: 25px;
+         margin-bottom: 32px;
+     }
+     .sobre-nosotros4{
+         font-size: 46px;
+     }
+     .slogan4{
+         font-size: 20px;
+     }
+     .titulo-patrocinadores4{
+         font-size: 46px;
+     }
+     .subtitulo-patrocinadores4{
+         font-size: 20px;
+     }
+     .titulo-footer4{
+         font-size: 40px;
+     }
+ }
+
+
+ ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.fifa{
+    width: 100%;
+    height: 650px;
+    background-image: url(imagenes/../../../../assets/img/fifa20.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+ }
+ 
+ header .textos5{
+     margin-top: 152px;
+ }
+ 
+ header .titulo5{
+     font-size: 85px;
+     
+ }
+ 
+ header .subtitulo5{
+     font-size: 42px;
+     font-weight: 300;
+     margin-bottom: 32px;
+     color: black;
+     
+ }
+ 
+ header .boton5{
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+ 
+ }
+ 
+ .sesgoabajo5{
+     z-index: 10;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 35vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #fff transparent;
+ }
+ 
+ .sesgoarriba5{
+     z-index: 10;
+     position: absolute;
+     top: 0;
+     left: 0;
+     border-width: 35vh 100vw 0 0 ;
+     border-style: solid;
+     border-color: #fff transparent transparent  transparent;
+ }
+ 
+ .contenedor5{
+     width: 90%;
+     max-width: 1000px;
+     margin: auto;
+     overflow: hidden;
+     padding: 52px 0;
+ }
+ 
+ .sobre-nosotros5{
+     text-align: center;
+     font-size: 56px;
+     margin-bottom: 10px;
+     font-weight: 600;
+ }
+ 
+ .slogan5{
+     font-size: 24px;
+     font-weight: 300;
+     text-align: center;
+     margin-bottom: 24px;
+ }
+ 
+ .parrafo5{
+     margin-bottom: 13px;
+     font-weight: 300;
+     text-align: justify;
+     line-height: 24px;
+     color: rgb(24,16,16);
+ 
+ }
+ 
+ .acerca-de5 .boton5{
+     display: inline-block;
+     padding: 6px;
+     width: 128px;
+     font-weight: 300;
+     border: 1px solid rgba(24,16,16,.7);
+     color: rgb(24,16,16);
+     font-size: 16px;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 16px;
+     margin-top: 24px;
+  }
+ 
+  .galeria5 {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+  }
+ 
+  .imagenes5 {
+      width: 20%;
+      height: 500px;
+     overflow: hidden;
+     position: relative;
+  }
+ 
+  .imagenes5 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+ 
+  .encima5{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(53, 74, 94, 0.815);
+  }
+ 
+  .encima5 h2{
+      position: relative;
+      top: 45%;
+      text-align: center;
+      color: #fff;
+  }
+ 
+  .encima5 div{
+      position: relative;
+      display: block;
+      top: 46%;
+      width: 40px;
+      height: 5px;
+      background: #fff;
+      margin: auto;
+  }
+ 
+  .cards5{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;     
+  }
+ 
+  .card5{
+      margin: 20px 0;
+      width: 30%;
+      height: 250px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0px 0px 4px 0 rgb(52, 73, 94, 0.849);
+     
+  }
+ 
+  .cards5 img{
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 100%;
+  }
+ 
+  .fondo5{
+      height: 900px;
+      position: relative;
+      background-image: url(imagenes/../../../../assets/img/fifa202.jpg);
+      overflow: hidden;
+      background-attachment: fixed;
+      background-position: center;
+      padding-top: 130px;
+ 
+  }
+ 
+  .sesgoabajo-unico5{
+     z-index: 10;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 35vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #34495e transparent;
+  }
+ 
+  .titulo-patrocinadores5, .subtitulo-patrocinadores5{
+      color: #fff;
+      text-align: center;
+  }
+ 
+  .titulo-patrocinadores5{
+      font-size: 56px;
+      margin-top: 48px;
+  }
+ 
+  .subtitulo-patrocinadores5{
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 64px;
+  }
+ 
+  .clientes5{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+      width: 100%;
+      justify-content: space-between;
+  }
+ 
+  .cliente5{
+      width: 30%;
+  }
+ 
+  .cliente5 img {
+      width: 100%;
+  }
+ 
+
+ 
+ 
+  @media screen and (max-width:900px){
+      .card5{
+          width: 48%;
+      }
+  }
+ 
+  @media screen and (max-width:610px){
+     header .textos5{
+         margin-top: 130px;
+     }
+     header .titulo5{
+         font-size: 75px;
+     }
+     .card5{
+         width: 90%;
+     }
+     .fondo5{
+         height: auto;
+     }
+     .especial5{
+         display: none;
+     }
+     .cliente5{
+         width: 90%;
+         height: 200px;
+         margin-bottom: 50px;
+     }
+ }
+ 
+ @media screen and (max-width:380px){
+     header .textos5{
+         margin-top: 100px;
+     }
+     header .titulo5{
+         font-size: 65px;
+     }
+     header .subtitulo5{
+         font-size: 25px;
+         margin-bottom: 32px;
+     }
+     .sobre-nosotros5{
+         font-size: 46px;
+     }
+     .slogan5{
+         font-size: 20px;
+     }
+     .titulo-patrocinadores5{
+         font-size: 46px;
+     }
+     .subtitulo-patrocinadores5{
+         font-size: 20px;
+     }
+     .titulo-footer5{
+         font-size: 40px;
+     }
+ }
+
+
+
+ ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.warframe{
+    width: 100%;
+    height: 650px;
+    background-image: url(imagenes/../../../../assets/img/warframe.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+ }
+ 
+ header .textos6{
+     margin-top: 152px;
+ }
+ 
+ header .titulo6{
+     font-size: 85px;
+     
+ }
+ 
+ header .subtitulo6{
+     font-size: 42px;
+     font-weight: 300;
+     margin-bottom: 32px;
+     color: black;
+     
+ }
+ 
+ header .boton6{
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+ 
+ }
+ 
+ .sesgoabajo6{
+     z-index: 10;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 35vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #fff transparent;
+ }
+ 
+ .sesgoarriba6{
+     z-index: 10;
+     position: absolute;
+     top: 0;
+     left: 0;
+     border-width: 35vh 100vw 0 0 ;
+     border-style: solid;
+     border-color: #fff transparent transparent  transparent;
+ }
+ 
+ .contenedor6{
+     width: 90%;
+     max-width: 1000px;
+     margin: auto;
+     overflow: hidden;
+     padding: 52px 0;
+ }
+ 
+ .sobre-nosotros6{
+     text-align: center;
+     font-size: 56px;
+     margin-bottom: 10px;
+     font-weight: 600;
+ }
+ 
+ .slogan6{
+     font-size: 24px;
+     font-weight: 300;
+     text-align: center;
+     margin-bottom: 24px;
+ }
+ 
+ .parrafo6{
+     margin-bottom: 13px;
+     font-weight: 300;
+     text-align: justify;
+     line-height: 24px;
+     color: rgb(24,16,16);
+ 
+ }
+ 
+ .acerca-de6 .boton6{
+     display: inline-block;
+     padding: 6px;
+     width: 128px;
+     font-weight: 300;
+     border: 1px solid rgba(24,16,16,.7);
+     color: rgb(24,16,16);
+     font-size: 16px;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 16px;
+     margin-top: 24px;
+  }
+ 
+  .galeria6 {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+  }
+ 
+  .imagenes6 {
+      width: 20%;
+      height: 500px;
+     overflow: hidden;
+     position: relative;
+  }
+ 
+  .imagenes6 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+ 
+  .encima6{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(53, 74, 94, 0.815);
+  }
+ 
+  .encima6 h2{
+      position: relative;
+      top: 45%;
+      text-align: center;
+      color: #fff;
+  }
+ 
+  .encima6 div{
+      position: relative;
+      display: block;
+      top: 46%;
+      width: 40px;
+      height: 5px;
+      background: #fff;
+      margin: auto;
+  }
+ 
+  .cards6{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;     
+  }
+ 
+  .card6{
+      margin: 20px 0;
+      width: 30%;
+      height: 250px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0px 0px 4px 0 rgb(52, 73, 94, 0.849);
+     
+  }
+ 
+  .cards6 img{
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 100%;
+  }
+ 
+  .fondo6{
+      height: 900px;
+      position: relative;
+      background-image: url(imagenes/../../../../assets/img/warframe2.jpg);
+      overflow: hidden;
+      background-attachment: fixed;
+      background-position: center;
+      padding-top: 130px;
+ 
+  }
+ 
+  .sesgoabajo-unico6{
+     z-index: 10;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 35vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #34495e transparent;
+  }
+ 
+  .titulo-patrocinadores6, .subtitulo-patrocinadores6{
+      color: #fff;
+      text-align: center;
+  }
+ 
+  .titulo-patrocinadores6{
+      font-size: 56px;
+      margin-top: 48px;
+  }
+ 
+  .subtitulo-patrocinadores6{
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 64px;
+  }
+ 
+  .clientes6{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+      width: 100%;
+      justify-content: space-between;
+  }
+ 
+  .cliente6{
+      width: 30%;
+  }
+ 
+  .cliente6 img {
+      width: 100%;
+  }
+ 
+
+ 
+ 
+  @media screen and (max-width:900px){
+      .card6{
+          width: 48%;
+      }
+  }
+ 
+  @media screen and (max-width:610px){
+     header .textos6{
+         margin-top: 130px;
+     }
+     header .titulo6{
+         font-size: 75px;
+     }
+     .card6{
+         width: 90%;
+     }
+     .fondo6{
+         height: auto;
+     }
+     .especial6{
+         display: none;
+     }
+     .cliente6{
+         width: 90%;
+         height: 200px;
+         margin-bottom: 50px;
+     }
+ }
+ 
+ @media screen and (max-width:380px){
+     header .textos6{
+         margin-top: 100px;
+     }
+     header .titulo6{
+         font-size: 65px;
+     }
+     header .subtitulo6{
+         font-size: 25px;
+         margin-bottom: 32px;
+     }
+     .sobre-nosotros6{
+         font-size: 46px;
+     }
+     .slogan6{
+         font-size: 20px;
+     }
+     .titulo-patrocinadores6{
+         font-size: 46px;
+     }
+     .subtitulo-patrocinadores6{
+         font-size: 20px;
+     }
+     .titulo-footer6{
+         font-size: 40px;
+     }
+ }
+
+
+
+
+

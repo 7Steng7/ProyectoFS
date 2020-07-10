@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:'noticias', component: NoticiasComponent},
   {path:'artistas', component: ArtistasComponent},
   {path:'cambios', component: CambiosComponent},
-  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+  { path: '', redirectTo: 'juegos', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -23,3 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+  

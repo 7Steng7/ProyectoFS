@@ -17,6 +17,10 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ArtistasComponent } from './components/artistas/artistas.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { CambiosComponent } from './components/cambios/cambios.component';
+import { HttpClientModule }    from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import { GuiaDetailComponent } from './guia-detail/guia-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import { CambiosComponent } from './components/cambios/cambios.component';
     NoticiasComponent,
     ArtistasComponent,
     HomepageComponent,
-    CambiosComponent
+    CambiosComponent,
+    GuiaDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,10 @@ import { CambiosComponent } from './components/cambios/cambios.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

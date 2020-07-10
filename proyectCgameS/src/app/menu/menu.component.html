@@ -5,11 +5,11 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar><a href="/inicio"><img src="../../assets/img/logo.png" id="logm"></a></mat-toolbar>
     <mat-nav-list>
-        <a mat-list-item href="/juegos"><mat-icon>gamepad</mat-icon>Juegos</a>
-        <a mat-list-item href="/guia"><mat-icon>thumbs_up_down</mat-icon>Consejos</a>
-        <a mat-list-item href="/noticias"><mat-icon>public</mat-icon>Noticias</a>
-        <a mat-list-item href="/artistas"><mat-icon>brush</mat-icon>Artistas</a>
-        <a mat-list-item href="/cambios"><mat-icon>wifi_protected_setup</mat-icon>Cambios</a>
+        <a mat-list-item href="/juegos">Juegos<mat-icon>gamepad</mat-icon></a>
+        <a mat-list-item href="/guia">Consejos<mat-icon>thumbs_up_down</mat-icon></a>
+        <a mat-list-item href="/noticias">Noticias<mat-icon>public</mat-icon></a>
+        <a mat-list-item href="/artistas">Artistas<mat-icon>brush</mat-icon></a>
+        <a mat-list-item href="/cambios">Cambios<mat-icon>wifi_protected_setup</mat-icon></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,7 +20,7 @@
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon">menu_book</mat-icon>
       </button>
       <span>CgameS</span>
     </mat-toolbar>
