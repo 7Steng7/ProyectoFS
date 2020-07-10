@@ -1,0 +1,7 @@
+{
+    "?format=rss&platform=":{
+        "target" : "https://www.eurogamer.es",
+        "secure": false,
+        "loglevel": "debug"
+    }
+}

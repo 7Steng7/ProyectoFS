@@ -20,8 +20,10 @@ import { CambiosComponent } from './components/cambios/cambios.component';
 import { HttpClientModule }    from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { AngularFireModule } from '@angular/fire'
-import { environment } from '../environments/environment'
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,9 +50,14 @@ import { environment } from '../environments/environment'
     MatCardModule,
     MatExpansionModule,
     AngularFireModule.initializeApp(environment.firebase),
-
+    AngularFireStorageModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+    provide: BUCKET,
+    useValue:'gs://cgames-afab5.appspot.com'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

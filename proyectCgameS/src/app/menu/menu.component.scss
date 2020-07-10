@@ -7,27 +7,26 @@
 }
 
 .sidenav .mat-toolbar {
-  background: inherit;
+  background: bottom;
+  background-color: inherit;
 }
-
 .mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding-left: 170px;
 }
  #logm{
-  max-width:100%; 
-  margin-top: 20px;
+  max-width:50%; 
 }
+
 .ico{
   margin: 10px;
 }
 ::ng-deep .mat-list-item-content{
   justify-content: center;
-}
-::ng-deep .mat-icon{
-  margin-left: 20px;
-  margin-right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 40px 0;
 }
 .mat-toolbar.mat-primary span{
   margin-left: 20px;

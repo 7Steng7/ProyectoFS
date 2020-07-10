@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar><a href="/inicio"><img src="../../assets/img/logo.png" id="logm"></a></mat-toolbar>
+    <mat-toolbar></mat-toolbar>
     <mat-nav-list>
         <a mat-list-item href="/juegos">Juegos<mat-icon>gamepad</mat-icon></a>
         <a mat-list-item href="/guia">Consejos<mat-icon>thumbs_up_down</mat-icon></a>
@@ -22,7 +22,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu_book</mat-icon>
       </button>
-      <span>CgameS</span>
+      <a href="/inicio"><img src="../../assets/img/logo.png" id="logm"></a>
     </mat-toolbar>
     <!-- Add Content Here -->
         <!-- Poner los componentes según link rel -->

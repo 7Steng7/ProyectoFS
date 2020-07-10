@@ -1,12 +1,64 @@
     <ng-template #showLogin>
         <div id="logins">
-            <h1>Este es un espacio para amantes del arte y el diseño</h1>
-            <h2>Para continuar porfavor inicie sesion</h2>
-            <button class="btn btn-danger" (click)="login()">Ingresar con google</button>
-            <button class="btn btn-primary" (click)="loginfacebook()">Ingresar con facebook</button>
+          <div id="bc">
+            <h1>Este es un espacio para amantes del arte y el diseño,</h1>
+            <h2>si deseas compartir contenido o apoyar el talento</h2>
+            <h2>porfavor inicia sesion</h2>
+          </div>
+          <div style="display: block;">
+              <button style="margin: 10px; width: 64%;" class="btn btn-danger" (click)="login()">Ingresar con google</button>
+              <button style="color: white; margin: 10px; width: 64%; background-color: #385898;" class="btn" (click)="loginfacebook()">Ingresar con facebook</button>
+          </div>
         </div>
     </ng-template>
-  <div *ngIf="auth.user | async as user; else showLogin">
-    <h1><mat-icon>star_rate</mat-icon>Bienvenido {{ user.displayName }}<mat-icon>star_rate</mat-icon></h1>
-    <button class="btn btn-warning" (click)="logout()">Cerrar sesion</button>
+
+  <div class="imfo" *ngIf="auth.user | async as user; else showLogin">
+    <!--Header hasta boton -->
+    <div class="d-flex row arr">
+      <div class="d-flex col-md-6 col-sm-12" style="justify-content: center;">
+        <h1 style="margin: 10px 0;"><mat-icon class="ml">star_rate</mat-icon>Bienvenido {{ user.displayName }}<mat-icon class="ml">star_rate</mat-icon></h1>
+        <img src="{{user.photoURL}}" style="border-radius: 30px; margin:10px 0; max-width: 40px; max-height: 40px;" alt="">
+      </div>
+      <div class="col-md-6 col-sm-12" style="text-align: center;">
+        <button style="margin-top: 10px;" class="btn btn-warning" (click)="logout()">Cerrar sesion</button>
+      </div>
+    </div>
+    <!--Porcentaje de carga -->
+    <div class="huno">
+      <h1>Comparte una imagen</h1>
+    </div>
+    <div class="d-flex row arr" style="padding: 10px 0;">
+      <div style="text-align: center;" class="col-md-6 col-sm-12">
+        <label for="inp" class="inp">
+          <input type="text" id="inp" [(ngModel)] = "value"  placeholder="&nbsp;">
+          <span class="label">Añadir comentario <3</span>
+          <span class="focus-bg"></span>
+        </label>
+      </div>
+      <div style="text-align: center;" class="col-md-6 col-sm-12">
+          <input class="btn btn-success" type="file" (change)="uploadFile($event,user)" accept=".jpg"/>
+          <div>Carga de imagen: {{percent}}</div>
+          <div *ngIf="url" class="d-flex">
+            <p style="margin: 0;">Se ha subido la imagen, recarga la página</p>
+            <img [src]="url" style="max-width: 40px; max-height: 40px; margin: 5px;" alt="Imagen cargada">
+          </div>
+      </div>
+    </div>
+    <!--Compartidos -->
+    <div class="huno">
+      <h1>Compartidos recientemente</h1>
+    </div>  
+      <div style="max-width: 100%; justify-content: center;" class="d-flex row">
+        <div class="caja col-12" style="text-align: center;" *ngFor="let subido of subidos">
+          <div class="d-flex opa" style="justify-content: center;">
+            <h1><mat-icon>brush</mat-icon> Subido por : {{ subido.displayName }} <mat-icon>brush</mat-icon></h1>
+            <img src="{{subido.photoURL}}" style="border-radius: 30px; margin:0 0 16px; max-width: 40px; max-height: 40px;" alt="">
+          </div>
+          <img style="max-width: 30%; max-height: 30%;" [src]="subido.linkimagensubida" alt="imagensubida">
+          <div class="apo" style="max-width: 100%;">
+            <p>{{subido.comentario}}</p>
+          </div>
+        </div>
+      </div>
+
   </div>

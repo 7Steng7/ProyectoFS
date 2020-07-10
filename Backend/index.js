@@ -22,6 +22,8 @@ let compartirController = require('./app/controllers/compartir')();
 aplication.use('/compartir', compartirController);
 let noticiasController = require('./app/controllers/noticias')();
 aplication.use('/noticias', noticiasController);
+let subidosController = require('./app/controllers/subidos')();
+aplication.use('/subidos', subidosController);
 
 //Declarando controladores
 

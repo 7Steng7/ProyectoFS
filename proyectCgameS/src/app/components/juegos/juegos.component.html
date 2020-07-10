@@ -1,5 +1,6 @@
-  <div style="max-width: 100%;">
-  <mat-card *ngFor="let juego of juegos" class="example-card">
+  <div class="d-flex" id="jue">
+    <div style="max-width: 100%; justify-content: center;" class="row">
+  <mat-card *ngFor="let juego of juegos" class="example-card col-lg-4 col-md-6 col-sm-12">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{juego.name_game}}</mat-card-title>
@@ -16,4 +17,5 @@
       {{juego.consejos}}
     </mat-card-actions>
   </mat-card>
+  </div>
 </div>

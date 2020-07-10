@@ -1,6 +1,147 @@
+.imfo{
+    background-image: url(https://i1.wp.com/1.bp.blogspot.com/-b4iXlWULBIk/WHdvahJrJQI/AAAAAAAAfXQ/cY_WV6g71aw-I0ilubCO5uvszhoXZG18gCLcB/s1600/141210_MA_162-1024x611.jpg?ssl=1);
+    background-attachment: fixed;
+    background-size: cover;
+}
 #logins{
+    padding-top: 13%;
     margin: auto;
-    border: solid 1px black;
-    background-color: red;
     text-align: center;
+    max-width: 100%;
+    height: 91%;
+    background-image: url(https://c.wallhere.com/photos/56/7f/1536x864_px_Bonus_Jumping_mushroom_Super_Mario_video_games-574596.jpg!d);
+}
+
+#bc{
+    background-color: rgba($color: #212121, $alpha: 0.8 );
+    color: white;
+}
+#bc h1,h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+}
+.caja { 
+    max-width: 90%;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    color: #ffffff; 
+    background-color: rgba(48, 104, 37, 0.1);
+    font-size: 18px; 
+    font-weight: 400; 
+    text-align: center; 
+    margin: 0 0 25px; 
+    overflow: hidden; 
+    border-radius: 35px 0px 35px 0px; 
+    -moz-border-radius: 35px 0px 35px 0px; 
+    -webkit-border-radius: 35px 0px 35px 0px; 
+    border: 2px solid  rgba(48, 104, 37);
+    padding: 0;
+}
+.opa{
+    padding-top: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+}
+.apo{
+    padding-bottom: 16px;
+    padding-top: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 15px;
+}
+.arr{
+    background-color:rgba(48, 104, 37, 0.8);
+    margin: 0;
+}
+.ml{
+    margin: 0 4px;
+}
+
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .inp .label {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  .inp .focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  .inp input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: inset 0 -1px 0 rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+  }
+  .inp input:hover {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 -1px 0 rgb(255, 255, 255);
+  }
+  .inp input:not(:placeholder-shown) + .label {
+    color: rgba(0, 0, 0, 0.5);
+    -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+            transform: translate3d(0, -12px, 0) scale(0.75);
+  }
+  .inp input:focus {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+    box-shadow: inset 0 -2px 0 #ffee00;
+  }
+  .inp input:focus + .label {
+    color: #ffee00;
+    -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+            transform: translate3d(0, -12px, 0) scale(0.75);
+  }
+  .inp input:focus + .label + .focus-bg {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
+.cc{
+    background-color: white;
+    color: black;
+}
+.huno{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.877);
+    padding: 10px 0;
+}
+.huno h1{
+    margin: 0;
 }

@@ -1,33 +1,34 @@
-  <h1 style="text-align: center;margin: auto; margin-top: 20px; margin-bottom: 20px; width: 100%;">Contenido nuevo y próximos lanzamientos</h1>
-<div class="row" style="width: 100%; justify-content: center; margin-bottom: 20px;">
-  <div style="display: flex; width: 40%;" class="d-flex col-md-6">
-    <p style="text-align: center;margin: auto; font-size: 16px; ">A todos nos gusta estar informados, por esa razón te traemos las últimas noticias de tus consolas, desarrolladores y juegos favoritos, para que no dejes pasar la oportunidad de echarle un vistazo</p>
-  </div>
-  <div style="text-align: center;" class="d-flex col-md-6">
-  <img style="max-width: 100%;margin-left: 20px; margin-top: 20px; padding: 0;"  src="https://i.pinimg.com/originals/0b/8c/6e/0b8c6efc4e6f8182a45323f2c78507cc.jpg" alt="imagen noticiario">
-  </div>
+  <div id="not">
+      <div class="nocc">
+        <h1 style="text-align: center; width: 100%;">Contenido nuevo y próximos lanzamientos</h1>
+      <div class="row" style="width: 100%; justify-content: center">
+        <div style="display: flex; width: 40%;" class="d-flex col-md-6">
+          <p style="text-align: center;margin: auto; font-size: 16px; ">A todos nos gusta estar informados, por esa razón te traemos las últimas noticias de tus consolas, desarrolladores y juegos favoritos, para que no dejes pasar la oportunidad de echarle un vistazo</p>
+        </div>
+      </div>  
+    </div>
+    <mat-accordion class="d- flex col-sm-4" *ngFor="let noticia of noticias">
+      <mat-expansion-panel style="margin-bottom: 20px;" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div>
+              {{noticia.title}}
+            </div>
+          </mat-panel-title>
+          <mat-panel-description>
+            <div style="text-align: right;">
+              {{noticia.pubDate}}
+            </div>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <img src="{{noticia.imagen}}" style="display: block; margin: auto; margin-top: 20px ;
+        margin-bottom: 20px ; max-width: 100%;" alt="imagen de la noticia">    
+        <p style="text-align: center;max-width: 100%; display:block; margin-top: 40px;">{{noticia.description}}</p>
+        <mat-card-actions >
+          <a style="color: white;" href="{{noticia.link}}">
+          <button style="max-width: 100%; margin-top: 20px; margin-bottom: 20px;" mat-button>Más información</button>
+        </a>
+        </mat-card-actions>
+      </mat-expansion-panel>
+    </mat-accordion>
 </div>
-<mat-accordion class="d- flex col-sm-4" *ngFor="let noticia of noticias">
-  <mat-expansion-panel style="margin-bottom: 20px;" hideToggle>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <div>
-          {{noticia.title}}
-        </div>
-      </mat-panel-title>
-      <mat-panel-description>
-        <div style="text-align: right;">
-          {{noticia.pubDate}}
-        </div>
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <img src="{{noticia.imagen}}" style="display: block; margin: auto; margin-top: 20px ;
-    margin-bottom: 20px ; max-width: 100%;" alt="imagen de la noticia">    
-    <p style="text-align: center;max-width: 100%; display:block; margin-top: 40px;">{{noticia.description}}</p>
-    <mat-card-actions >
-      <a style="color: white;" href="{{noticia.link}}">
-      <button style="max-width: 100%; margin-top: 20px; margin-bottom: 20px;" mat-button>Más información</button>
-    </a>
-    </mat-card-actions>
-  </mat-expansion-panel>
-</mat-accordion>

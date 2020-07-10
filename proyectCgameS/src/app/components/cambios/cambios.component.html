@@ -1,1 +1,26 @@
-<h1>Seccion para que la comunidad postee los juegos que tienen para cambio</h1>
+<ng-template #showLogin>
+    <div id="biok">
+      <div class="bb row">
+        <div class="col-12">
+          <h1>¿Tienes algun juego que quieras cambiar?</h1>
+        </div>
+        <div class="col-12">
+          <h2>Ingresa y rellena el formulario, otros usuarios podrán ver que pueden ofrecerte</h2>
+        </div>
+      </div>
+      <div style="display: block;">
+          <button style="margin: 10px; width: 64%;" class="btn btn-danger" (click)="login()">Ingresar con google</button>
+          <button style="color: white; margin: 10px; width: 64%; background-color: #385898;" class="btn" (click)="loginfacebook()">Ingresar con facebook</button>
+      </div>
+    </div>
+</ng-template>
+
+<div class="imfo" *ngIf="auth.user | async as user; else showLogin">
+    <div class="d-flex col-md-6 col-sm-12" style="justify-content: center;">
+        <h1 style="margin: 10px 0;"><mat-icon class="ml">star_rate</mat-icon>Bienvenido {{ user.displayName }}<mat-icon class="ml">star_rate</mat-icon></h1>
+        <img src="{{user.photoURL}}" style="border-radius: 30px; margin:10px 0; max-width: 40px; max-height: 40px;" alt="">
+      </div>
+      <div class="col-md-6 col-sm-12" style="text-align: center;">
+        <button style="margin-top: 10px;" class="btn btn-warning" (click)="logout()">Cerrar sesion</button>
+      </div>
+</div>

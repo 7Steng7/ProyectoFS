@@ -4,8 +4,12 @@ import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
-import { User } from '../../interfaces/users'
+import { User } from '../../interfaces/users';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { finalize } from 'rxjs/operators';
+import { AngularFireStorage} from '@angular/fire/storage'
+import { JuegosService } from '../../services/juegos.service';
+import { Subido } from '../../interfaces/subido';
 
 @Component({
   selector: 'app-artistas',
@@ -13,10 +17,17 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
   styleUrls: ['./artistas.component.scss']
 })
 export class ArtistasComponent {
+  subidos : Subido[];
+  value: string = '';
+  percent: number;
   user$: Observable<any>;
-  constructor(private authS:AuthService, private router: Router,public auth: AngularFireAuth, private afs: AngularFirestore) { }
+  url: string;
+  cargados : any[] = [];
+  constructor(private authS:AuthService, private router: Router,public auth: AngularFireAuth, private afs: AngularFirestore, private storage: AngularFireStorage, private juegoService: JuegosService ) { }
 
   async login() {
+    //Se simplifica con
+    //this.authS.loginGoogle();
     const credential = await this.auth.signInWithPopup(new auth.GoogleAuthProvider());
     return this.updateUserData(credential.user);
   }
@@ -32,12 +43,44 @@ export class ArtistasComponent {
       uid: user.uid, 
       email: user.email, 
       displayName: user.displayName,
-      photoURL:user.photoURL
+      photoURL:user.photoURL,
     } 
     return userRef.set(data, { merge: true })
   }
   logout() {
     this.auth.signOut();
   }
+  uploadFile(event,user){
+    const file = event.target.files[0];
+    const now =  new Date().getTime() ; 
+    const filePath = 'archivo_subido' + now ;
+    const ref = this.storage.ref(filePath);
+    const task = ref.put(file);
+    
+    task.snapshotChanges().pipe(finalize(() => {
+      ref.getDownloadURL().subscribe((link)=>{
+        this.afs.collection('subidos').doc(now.toString()+`${user.uid}`).set({
+          linkimagensubida : link,
+          uid : user.uid ,
+          email: user.email, 
+          displayName: user.displayName, 
+          photoURL:user.photoURL,
+          comentario : this.value 
+        })
+        this.url = link;
+      })
+    })
+    ).subscribe();
+    task.percentageChanges().subscribe((percent)=>{
+      this.percent = percent;
+    })
+  }
 
+  getsubidos(): void{
+    this.juegoService.getsubidos()
+    .subscribe((subidos) => { this.subidos = subidos });
+  }
+  ngOnInit(): void {
+    this.getsubidos();
+  }
 }
