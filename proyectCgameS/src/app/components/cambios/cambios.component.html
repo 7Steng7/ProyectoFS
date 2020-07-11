@@ -1,4 +1,4 @@
-<ng-template #showLogin>
+<ng-template #mostrar>
     <div id="biok">
       <div class="bb row">
         <div class="col-12">
@@ -15,12 +15,74 @@
     </div>
 </ng-template>
 
-<div class="imfo" *ngIf="auth.user | async as user; else showLogin">
-    <div class="d-flex col-md-6 col-sm-12" style="justify-content: center;">
-        <h1 style="margin: 10px 0;"><mat-icon class="ml">star_rate</mat-icon>Bienvenido {{ user.displayName }}<mat-icon class="ml">star_rate</mat-icon></h1>
-        <img src="{{user.photoURL}}" style="border-radius: 30px; margin:10px 0; max-width: 40px; max-height: 40px;" alt="">
+<div *ngIf="auth.user | async as user; else mostrar">
+  <div id="all">
+    <!-- Bienvenido hasta CS-->
+    <div class="d-flex" style="margin-bottom: 20px;">
+      <div class="row col-md-6 col-sm-12" style="justify-content: center;">
+          <h1 style="margin: 10px 0;"><mat-icon class="ml">star_rate</mat-icon>Bienvenido {{ user.displayName }}<mat-icon class="ml">star_rate</mat-icon></h1>
+          <img src="{{user.photoURL}}" style="border-radius: 30px; margin:10px 0; max-width: 40px; max-height: 40px;" alt="">
+        </div>
+        <div class="col-md-6 col-sm-12" style="text-align: center;">
+          <button style="margin-top: 10px;" class="btn btn-warning" (click)="logout()">Cerrar sesion</button>
+        </div>
+    </div>   
+    <!-- Tarjeta-->
+    <div style="max-width: 98%;">
+        <div class="content col-md-12">
+          <h1 class="logo">Cambios de <span>Juegos</span></h1>
+          <div class="contact-wrapper animated bounceInUp">
+              <div class="contact-form">
+                  <h3>Cambios de Juegos</h3>
+                  <form action="">
+                      <p>
+                          <label>Nombre de tu Juego</label>
+                          <input [(ngModel)] = "nombre" type="text" name="juego"  required="required" placeholder="¿Qué juego quieres cambiar o compartir?">
+                      </p>
+                      <p>
+                          <label>Precio Real</label>
+                          <input [(ngModel)] = "precio" type="number" name="precio"  required="required" placeholder="$USD">
+                      </p>
+                      <p>
+                        <label>Url de imagen</label>
+                        <input [(ngModel)] = "urlimg" type="text" name="urlimg"  required="required" placeholder="Ingresa url">
+                    </p>
+                      <p class="block">
+                          <button (click)="enviarjuego(user)" type="button">
+                              Enviar
+                          </button>
+                      </p>
+                  </form>
+              </div>
+              <div class="contact-info">
+                  <h4>Instrucciones</h4>
+                  <ul>
+                      <li><i class="fas fa-map-marker-alt"></i>-Si quieres o tienes un juego para compartir o vender, puedes usar este espacio para postearlo</li>
+                      <li><i class="fas fa-phone"></i>1. Ingresa el nombre del juego</li>
+                      <li><i class="fas fa-envelope-open-text"></i>2. Ingresa el promedio en dolares de su valor</li>
+                      <li><i class="fas fa-envelope-open-text"></i>3. Pon una url que tenga la imagen del juego</li>
+                      <li><i class="fas fa-envelope-open-text"></i>4. Clickea el botón de enviar</li>
+                      <li><i class="fas fa-envelope-open-text"></i>5. Felicidades, compartiste un juego para la comunidad</li>
+                  </ul>
+                  <p>En el post de lo usuarios aparecerá su correo por si quiere hacer alguna oferta</p>
+              </div>
+          </div>
       </div>
-      <div class="col-md-6 col-sm-12" style="text-align: center;">
-        <button style="margin-top: 10px;" class="btn btn-warning" (click)="logout()">Cerrar sesion</button>
+    </div>  
+    <div style="text-align: center;">
+      <div style="background-color: #03042ba4; margin-top: 30px;">
+        <h1>Otras personas ofrecen estos juegos</h1>
       </div>
+      <div *ngFor="let compartir of compartirs">
+          <div class="comp">
+          <h1>
+            {{compartir.displayName}} ofrece {{compartir.juego_cambio}} con un valor de {{compartir.precioreal}} $USD
+          </h1>
+          <img style="max-width: 50%; max-height: 50%;" [src]="compartir.urlimg"alt="">
+          <br>
+          <p style="font-size: 20px; margin-top: 20px;">Si te interesa puedes enviar un correo a : {{compartir.email}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -4,6 +4,9 @@ import { auth } from 'firebase/app';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { User } from '../../interfaces/users';
 import { Observable, of } from 'rxjs';
+import { JuegosService } from 'src/app/services/juegos.service';
+import { Compartir } from '../../interfaces/compartir';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-cambios',
@@ -12,13 +15,19 @@ import { Observable, of } from 'rxjs';
 })
 export class CambiosComponent implements OnInit {
 
-  constructor(public auth: AngularFireAuth,private afs: AngularFirestore) { }
+  constructor(private services: JuegosService,
+    private firestore: AngularFirestore,
+    public auth: AngularFireAuth,
+    private authS:AuthService ) { }
 
+  nombre: string = '';
+  precio: string = '';
+  urlimg: string = '';
+  uploadFiles: any[] = [];
   user$: Observable<any>;
-  cargados : any[] = [];
+  compartirs : Compartir[];
+
   async login() {
-    //Se simplifica con
-    //this.authS.loginGoogle();
     const credential = await this.auth.signInWithPopup(new auth.GoogleAuthProvider());
     return this.updateUserData(credential.user);
   }
@@ -26,10 +35,9 @@ export class CambiosComponent implements OnInit {
     const credential = await this.auth.signInWithPopup(new auth.FacebookAuthProvider());
     return this.updateUserData(credential.user);
   }
-  private updateUserData(user) {
+   private updateUserData(user) {
     //Guarda los datos del usuario en firestore al iniciar sesión
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
-  
+    const userRef: AngularFirestoreDocument<User> = this.firestore.doc(`users/${user.uid}`);
     const data = { 
       uid: user.uid, 
       email: user.email, 
@@ -38,10 +46,31 @@ export class CambiosComponent implements OnInit {
     } 
     return userRef.set(data, { merge: true })
   }
+
+  enviarjuego(user){
+    const userRef: AngularFirestoreDocument<User> = this.firestore.doc(`compartir/${user.uid}`+`${this.nombre}`);
+    const datos = { 
+      uid: user.uid, 
+      email: user.email, 
+      displayName: user.displayName,
+      photoURL:user.photoURL,
+      juego_cambio : this.nombre,
+      precioreal: this.precio,
+      urlimg: this.urlimg
+    } 
+    return userRef.set(datos, { merge: true })
+  }
+
   logout() {
     this.auth.signOut();
   }
-  ngOnInit(): void {
+
+  getcompartir(): void{
+    this.services.getcompartir()
+    .subscribe((compartirs) => { this.compartirs = compartirs });
   }
+    ngOnInit(): void {
+      this.getcompartir();
+    }
 
 }

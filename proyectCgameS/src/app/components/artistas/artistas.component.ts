@@ -7,7 +7,7 @@ import { auth } from 'firebase/app';
 import { User } from '../../interfaces/users';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { finalize } from 'rxjs/operators';
-import { AngularFireStorage} from '@angular/fire/storage'
+import { AngularFireStorage} from '@angular/fire/storage';
 import { JuegosService } from '../../services/juegos.service';
 import { Subido } from '../../interfaces/subido';
 
@@ -23,6 +23,7 @@ export class ArtistasComponent {
   user$: Observable<any>;
   url: string;
   cargados : any[] = [];
+  currentUserFirebase: any;
   constructor(private authS:AuthService, private router: Router,public auth: AngularFireAuth, private afs: AngularFirestore, private storage: AngularFireStorage, private juegoService: JuegosService ) { }
 
   async login() {
