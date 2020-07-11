@@ -1,3 +1,5 @@
+const { resolveContent } = require('nodemailer/lib/shared');
+
 module.exports = function (databaseConfig) {
     const express = require('express');
     const router = express.Router();
@@ -88,4 +90,37 @@ module.exports = function (databaseConfig) {
     });    
 
     return router;
+
+
+
+                 //Nodemailer Envio de Correos
+    exports.SendEmail = functions.https.onRequest((request, response)=>{
+
+        const nodemailer = require("nodemailer");
+
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'cgamesapp1@gmail.com', // generated ethereal user
+              pass: 'app12345', // generated ethereal password
+            },
+          });
+
+          let emailOptions = {
+              from: '"Todo Sobre Video Juegos 👻" <cgamesapp1@gmail.com>',
+              to: 'cristhianmoreno9310@gmail.com',
+              subject: 'Mwensaje de Prueba',
+              text: 'Tu Juego Se Ha Guardado Correctamente',
+              html:'<b>Tu Juego Se Ha Guardado Correctamente</b>'
+          };
+          return transporter.sendMail(emailOptions).then((data)=>{
+            response.send('Correo Enviado');
+            resolve(data);
+          }).catch((error)=>{
+            response.send(error);
+            reject(error);
+          });
+    });
+
+
 }
